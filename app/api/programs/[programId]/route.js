@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function PATCH(request, { params }) {
     const { programId } = params;
-    const { name, programCode } = await request.json();
+    const { newProgramName, newProgramCode } = await request.json();
     await connectMongoDB();
-    await ProgramModel.findByIdAndUpdate(programId, { name, programCode});
+    await ProgramModel.findByIdAndUpdate(programId, { name: newProgramName, programCode: newProgramCode });
     return NextResponse.json({ message: "Program updated" }, { status: 200 });
 }
 

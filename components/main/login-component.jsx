@@ -46,16 +46,13 @@ const Login = () => {
   return (
     <>
       <div className="relative h-screen">
-        {/* Background image */}
         <Image
           className="absolute inset-0 bg-cover bg-center filter blur-sm"
           src={"/images/school_image.jpg"}
           alt="KLD"
           fill
         />
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-70" />
-        {/* login content */}
         <div className="flex relative w-full items-center justify-center flex-col z-10 md:px-0 px-10">
           <div className="flex items-center justify-center mb-5 mt-20">
             <Image
@@ -69,7 +66,6 @@ const Login = () => {
             Login to view your grades, access academic advising tools, and stay
             updated on your educational journey.
           </p>
-          {/* login form */}
           <Tabs defaultValue="login" className="md:w-[600px] w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="login">Login</TabsTrigger>
@@ -80,7 +76,7 @@ const Login = () => {
                 <CardHeader>
                   <CardTitle>Login your account</CardTitle>
                   <CardDescription>
-                    Don't let your grades define you.
+                    Don&apos;t let your grades define you.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -112,10 +108,9 @@ const Login = () => {
                       <button
                         type="button"
                         className="absolute inset-y-0 right-0 flex items-center pr-3 focus:outline-none"
-                        onClick={() => setShowPassword(!showPassword)} // Toggle show/hide password
+                        onClick={() => setShowPassword(!showPassword)}
                       >
                         {showPassword ? <EyeOffIcon className="w-5 h-5 mt-4" /> : <EyeIcon className="w-5 h-5 mt-4" />}
-                        {/* Password toggle text */}
                       </button>
                     </div>
                     <button className="bg-green-800 hover:bg-green-800/90 text-white rounded-md px-5 py-3">
